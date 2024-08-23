@@ -1,7 +1,15 @@
 import { StyleSheet } from "react-native";
 
-const globalStyles = StyleSheet.create({
-// authScreen
+const GlobalStyles = StyleSheet.create({
+    // generalContainer
+
+generalContainer:{
+    flex: 1,
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center', 
+},
+    // authScreen
 headerStyle:{
     minWidth: '100%',
     height: 70,
@@ -24,4 +32,4 @@ authImgScreen:{
 
 });
 
-export default globalStyles
+export default GlobalStyles

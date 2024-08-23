@@ -1,12 +1,13 @@
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-import Navigation from '../../Navigation'
 
-export const loginScreen = ({Navigation})=> {
+export const loginScreen = ({navigation})=> {
   return (
     <View>
-        <Image source={'../img/NASA_logo.svg.png'}/>
-      <Text>loginScreen</Text>
+        {/* <Image source={'../img/NASA_logo.svg.png'}/> */}
+      <TouchableOpacity onPress={()=>navigation.navigate('registerScreen')}>
+      <Text>LoginScreen</Text>
+      </TouchableOpacity>
     </View>
   )
 }
