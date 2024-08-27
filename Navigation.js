@@ -10,6 +10,7 @@ import { Text, View, Image } from 'react-native'
 import registerScreen from './screens/Auth/registerScreen';
 import loginScreen from './screens/Auth/loginScreen';
 import homeScreen from './screens/main/homeScreen'
+import TakeCameraScreen from './screens/Functions/TakeCameraScreen'
 
 // Importaciones de logos/imágenes
 
@@ -23,12 +24,19 @@ function NavigationScreens(){
             <Stack.Screen name="loginScreen" component={loginScreen} options={{headerShown:false}} />
             <Stack.Screen name="registerScreen" component={registerScreen} options={{headerShown:false}} />
             <Stack.Screen name="homeScreen" component={homeScreen} options={
-                {headerShown:true, 
+            {headerShown:true, 
                 headerStyle:{backgroundColor: '#1E3A8A'}, 
                 headerTintColor:'#fff', 
                 headerTitle: '夢 DREAM', 
                 headerTitleAlign:'center'}
                 } />
+            <Stack.Screen name='imagesScreen' component={TakeCameraScreen   } options={
+             {headerShown:true, 
+                headerStyle:{backgroundColor: '#1E3A8A'}, 
+                headerTintColor:'#fff', 
+                headerTitle: '夢 DREAM', 
+                headerTitleAlign:'center'}   
+            }/>
         </Stack.Navigator>
       );
     

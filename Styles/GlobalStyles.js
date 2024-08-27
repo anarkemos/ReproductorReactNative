@@ -7,7 +7,8 @@ generalContainer:{
     flex: 1,
     display: 'flex',
     justifyContent: 'center',
-    alignItems: 'center', 
+    alignItems: 'center',
+
 },
     // authScreen
  
@@ -38,7 +39,7 @@ background_logo_auth:{
 },
 
 logo_auth:{
-    minHeight:'70%'   
+    minHeight:'30%'   
 },
 
 input_auth:{
@@ -76,14 +77,31 @@ authText_btn:{
     color:'white',
     height: 'auto',
 },
-// authImgScreen
-authImgScreen:{
-    width:'50%',
-    height: 200,  
-    borderColor: 'red',
-    borderWidth: 2, 
+// Home
+home_container:{
+    display: 'flex',
+    flexWrap: 'wrap',
+    flexDirection: 'row',
+    justifyContent: 'center',
 },
+home_btn:{
+    maxWidth: '40%',
+    height: 100,
+    backgroundColor: '#1E3A8A',
+    margin: 20,
+    marginTop: 50,
+    borderRadius: 15,
+    display: 'flex',
+    flexBasis: '30%',
+    justifyContent: 'center',
+    alignItems: 'center',
+},
+home_btn_text:{
+    fontWeight: 'bold',
+    color: 'white',
+    fontSize: 20,
 
+},
 
 });
 

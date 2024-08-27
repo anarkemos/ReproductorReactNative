@@ -69,7 +69,7 @@ export const loginScreen = ({navigation})=> {
             onPress={()=>navigation.navigate('registerScreen')}
             style={GlobalStyles.textlink_auth}
           >
-            {" "} 
+            {" "} Registrarme
           </Text>
         </Text>
         <TouchableOpacity
