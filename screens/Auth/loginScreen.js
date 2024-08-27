@@ -1,8 +1,40 @@
 import { View, Text, Image, TextInput, TouchableOpacity, ScrollView } from 'react-native'
-import React from 'react'
+import React, {useState} from 'react'
 import GlobalStyles from '../../Styles/GlobalStyles'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 export const loginScreen = ({navigation})=> {
+  
+  const [email, setEmail]= useState("");
+  const [password, setPassword]= useState("");
+
+  const handleLogin= async () => {
+    try{
+      const storedData = await AsyncStorage.getItem("RegisterData");
+
+      if (storedData !==null){
+        const storedDataArray = JSON.parse(storedData);
+        const userFound = storedDataArray.find(
+          user=> user.email === email && user.password===password
+        );
+        if(userFound){
+          navigation.navigate('homeScreen');
+        }else{
+          window.alert(
+            "Error. Hubo un problema al intentar iniciar sesión"
+          )
+          console.log("no funkó ja, ja")
+        }
+      }
+    } catch(error){
+      window.alert(
+        "Error. Hubo un problema al intentar iniciar sesión"
+      )
+    }
+  }
+
+
+  
   return (
     <ScrollView>
       <View style={GlobalStyles.generalContainer}>
@@ -18,17 +50,17 @@ export const loginScreen = ({navigation})=> {
           keyboardType="email-address"
           autoCapitalize="none"
           maxLength={50}
-          // value={email}
+          value={email}
           style={GlobalStyles.input_auth}
-          // onChangeText={setEmail}
+          onChangeText={setEmail}
         />
         <TextInput
           placeholder="Contraseña"
           maxLength={25}
           secureTextEntry={true}
-          // value={password}
+          value={password}
           style={GlobalStyles.input_auth}
-          // onChangeText={setPassword}
+          onChangeText={setPassword}
         />
         
         <Text style={GlobalStyles.authText}>
@@ -37,12 +69,11 @@ export const loginScreen = ({navigation})=> {
             onPress={()=>navigation.navigate('registerScreen')}
             style={GlobalStyles.textlink_auth}
           >
-            {" "}
-            Registrarme
+            {" "} 
           </Text>
         </Text>
         <TouchableOpacity
-          // onPress={handleRegister}
+          onPress={handleLogin}
           style={GlobalStyles.auth_btn}
         >
           <Text style={GlobalStyles.authText_btn}>Iniciar Sesión</Text>

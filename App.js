@@ -14,6 +14,7 @@ const App = () => {
 export default App
 
 // Navegación  Stack -> manual
-// 4 Opciones ()
+// 4 Opciones 
+// (-Perfil, Fotos(tomar videos), videos, audios)
 // Validación de los campos vacíos
 // Registro
