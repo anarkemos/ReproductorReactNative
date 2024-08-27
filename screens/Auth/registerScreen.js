@@ -10,11 +10,13 @@ export const registerScreen = ({navigation}) => {
 
     <ScrollView>
       <View style={GlobalStyles.generalContainer}>
-        <Text style={GlobalStyles.title_auth}>Registro</Text>
+        <View style={GlobalStyles.background_logo_auth}>
+        <Text style={GlobalStyles.title_auth}>REGISTRARME</Text>
         <Image
           source={require('../../img/logo.png')}
           style={GlobalStyles.logo_auth}
         />
+        </View>
         <TextInput
           placeholder="Nombre Completo"
           maxLength={25}
@@ -65,12 +67,6 @@ export const registerScreen = ({navigation}) => {
         </TouchableOpacity>
       </View>
     </ScrollView>
-    // <View style={globalStyles.authContainer}>
-    // <Image  style={globalStyles.authImgScreen} source={'../img/image-removebg-preview (1).png'}/>
-    // <TouchableOpacity onPress={()=>navigation.navigate('loginScreen')}>
-    // <Text>registerScreen</Text>
-    // </TouchableOpacity>
-    // </View>
   );
 };
 
