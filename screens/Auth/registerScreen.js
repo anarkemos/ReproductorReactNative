@@ -1,4 +1,4 @@
-// Importaicones escenciales
+// Importaciones escenciales
 
 import { View, Text, Image,TouchableOpacity,ScrollView,TextInput,Alert } from 'react-native'
 import React, { useState } from 'react'
@@ -7,7 +7,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 
-export const registerScreen = ({navigation}) => {
+export const RegisterScreen = ({navigation}) => {
   
   const [username, setUsername]=useState("");
   const [password, setPassword]=useState("");
@@ -47,7 +47,7 @@ export const registerScreen = ({navigation}) => {
     localStorage.push({username, email, password});
     const localStorageToString=JSON.stringify(localStorage);
     await AsyncStorage.setItem("RegisterData", localStorageToString);
-    navigation.navigate('loginScreen');
+    navigation.navigate('LoginScreen');
   }catch(error){
     window.alert(
       "Error, hubo un problema al registrar el usuario"
@@ -103,7 +103,7 @@ export const registerScreen = ({navigation}) => {
         <Text style={GlobalStyles.authText}>
           Ya tengo cuenta
           <Text
-            onPress={()=>navigation.navigate('loginScreen')}
+            onPress={()=>navigation.navigate('LoginScreen')}
             style={GlobalStyles.textlink_auth}
           >
             {" "}
@@ -121,4 +121,4 @@ export const registerScreen = ({navigation}) => {
   );
 };
 
-export default registerScreen;
+export default RegisterScreen;

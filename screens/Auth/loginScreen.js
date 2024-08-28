@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import GlobalStyles from '../../Styles/GlobalStyles'
 import AsyncStorage from '@react-native-async-storage/async-storage'
 
-export const loginScreen = ({navigation})=> {
+export const LoginScreen = ({navigation})=> {
   
   const [email, setEmail]= useState("");
   const [password, setPassword]= useState("");
@@ -18,7 +18,7 @@ export const loginScreen = ({navigation})=> {
           user=> user.email === email && user.password===password
         );
         if(userFound){
-          navigation.navigate('homeScreen');
+          navigation.navigate('HomeScreen');
         }else{
           window.alert(
             "Error. Hubo un problema al intentar iniciar sesión"
@@ -66,7 +66,7 @@ export const loginScreen = ({navigation})=> {
         <Text style={GlobalStyles.authText}>
           Aún no tengo una cuenta
           <Text
-            onPress={()=>navigation.navigate('registerScreen')}
+            onPress={()=>navigation.navigate('RegisterScreen')}
             style={GlobalStyles.textlink_auth}
           >
             {" "} Registrarme
@@ -83,4 +83,4 @@ export const loginScreen = ({navigation})=> {
   )
 }
 
-export default loginScreen;
+export default LoginScreen;

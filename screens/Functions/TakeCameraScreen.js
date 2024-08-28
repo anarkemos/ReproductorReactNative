@@ -3,7 +3,6 @@ import { Text, View, StyleSheet, TouchableOpacity, Image, Button } from 'react-n
 import Constants from 'expo-constants';
 import { Camera, CameraType } from 'expo-camera/legacy';
 import * as MediaLibrary from 'expo-media-library';
-import { MaterialIcons } from '@expo/vector-icons';
 
 
 export default function TakeCameraScreen() {

@@ -3,13 +3,12 @@
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native'
 import {createNativeStackNavigator} from '@react-navigation/native-stack'
-import GlobalStyles from './Styles/GlobalStyles'
-import { Text, View, Image } from 'react-native'
+
 
 // importaciones de pantallas
-import registerScreen from './screens/Auth/registerScreen';
-import loginScreen from './screens/Auth/loginScreen';
-import homeScreen from './screens/main/homeScreen'
+import RegisterScreen from './screens/Auth/RegisterScreen';
+import LoginScreen from './screens/Auth/LoginScreen';
+import HomeScreen from './screens/main/HomeScreen'
 import TakeCameraScreen from './screens/Functions/TakeCameraScreen'
 
 // Importaciones de logos/imágenes
@@ -21,16 +20,16 @@ const Stack = createNativeStackNavigator();
 function NavigationScreens(){
     return (
         <Stack.Navigator>
-            <Stack.Screen name="loginScreen" component={loginScreen} options={{headerShown:false}} />
-            <Stack.Screen name="registerScreen" component={registerScreen} options={{headerShown:false}} />
-            <Stack.Screen name="homeScreen" component={homeScreen} options={
+            <Stack.Screen name="LoginScreen" component={LoginScreen} options={{headerShown:false}} />
+            <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{headerShown:false}} />
+            <Stack.Screen name="HomeScreen" component={HomeScreen} options={
             {headerShown:true, 
                 headerStyle:{backgroundColor: '#1E3A8A'}, 
                 headerTintColor:'#fff', 
                 headerTitle: '夢 DREAM', 
                 headerTitleAlign:'center'}
                 } />
-            <Stack.Screen name='imagesScreen' component={TakeCameraScreen   } options={
+            <Stack.Screen name='ImagesScreen' component={TakeCameraScreen} options={
              {headerShown:true, 
                 headerStyle:{backgroundColor: '#1E3A8A'}, 
                 headerTintColor:'#fff', 

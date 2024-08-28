@@ -1,14 +1,14 @@
-import { Text, View } from 'react-native'
-import React, { Component } from 'react'
-import { TouchableOpacity } from 'react-native-web';
+import { Text, View, TouchableOpacity } from 'react-native'
+import React from 'react'
 import GlobalStyles from '../../Styles/GlobalStyles';
 
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Entypo from '@expo/vector-icons/Entypo';
 import MaterialIcons from '@expo/vector-icons/MaterialIcons';
 
-const homeScreen =({navigation})=>{
-  return (
+const HomeScreen =({navigation})=>{
+  
+  return (   
       <View style={GlobalStyles.home_container}>
           <TouchableOpacity style={GlobalStyles.home_btn}>
             <Text style={GlobalStyles.home_btn_text}>
@@ -18,7 +18,7 @@ const homeScreen =({navigation})=>{
             <AntDesign name="profile" size={34} color="white" />
             </Text>
           </TouchableOpacity>
-          <TouchableOpacity style={GlobalStyles.home_btn} onPress={()=>navigation.navigate('imagesScreen')}>
+          <TouchableOpacity style={GlobalStyles.home_btn} onPress={()=>navigation.navigate('ImagesScreen')}>
             <Text style={GlobalStyles.home_btn_text}>
               Imagenes
             </Text>
@@ -43,8 +43,9 @@ const homeScreen =({navigation})=>{
             </Text>
           </TouchableOpacity>
       </View>
+      
    
-  )
+  );
 };
 
-export default homeScreen
+export default HomeScreen
