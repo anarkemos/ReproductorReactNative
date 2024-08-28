@@ -10,6 +10,7 @@ import RegisterScreen from './screens/Auth/RegisterScreen';
 import LoginScreen from './screens/Auth/LoginScreen';
 import HomeScreen from './screens/main/HomeScreen'
 import TakeCameraScreen from './screens/Functions/TakeCameraScreen'
+import ProfileScreen from './screens/Functions/ProfileScreen';
 
 // Importaciones de logos/imágenes
 
@@ -20,8 +21,8 @@ const Stack = createNativeStackNavigator();
 function NavigationScreens(){
     return (
         <Stack.Navigator>
-            <Stack.Screen name="LoginScreen" component={LoginScreen} options={{headerShown:false}} />
-            <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{headerShown:false}} />
+            {/* <Stack.Screen name="LoginScreen" component={LoginScreen} options={{headerShown:false}} />
+            <Stack.Screen name="RegisterScreen" component={RegisterScreen} options={{headerShown:false}} /> */}
             <Stack.Screen name="HomeScreen" component={HomeScreen} options={
             {headerShown:true, 
                 headerStyle:{backgroundColor: '#1E3A8A'}, 
@@ -35,6 +36,14 @@ function NavigationScreens(){
                 headerTintColor:'#fff', 
                 headerTitle: '夢 DREAM', 
                 headerTitleAlign:'center'}   
+            }/>
+            <Stack.Screen name='ProfileScreen' component={ProfileScreen} options={
+                {headerShown:true,
+                    headerStyle:{backgroundColor: '#1E3A8A'}, 
+                headerTintColor:'#fff', 
+                headerTitle: '夢 DREAM', 
+                headerTitleAlign:'center'
+                }
             }/>
         </Stack.Navigator>
       );

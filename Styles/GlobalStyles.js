@@ -11,14 +11,7 @@ generalContainer:{
 
 },
     // authScreen
- 
-authContainer:{
-    display:'flex',
-    alignItems:'center',
-    justifyContent:'center',
-    minHeight: '100%',
 
-},
 title_auth:{
     fontSize: 30,
     textAlign: 'center',
@@ -102,6 +95,44 @@ home_btn_text:{
     fontSize: 20,
 
 },
+// Profile  Screen
+ProfileContainer:{
+    display:'flex',
+    alignItems:'center',
+    minHeight: '100%',
+    flex:1,
+
+},
+title_auth:{
+    fontSize: 30,
+    textAlign: 'center',
+    fontWeight: 'bold',
+    marginTop: 10,
+},
+bodyTopDashboard: {
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    paddingTop: 20,
+},
+textGeneral: {
+    fontFamily: 'Sans-serif',
+    fontSize: 17,
+    color: '#222831',
+    }, 
+bodyBottom: {
+    marginTop: 'auto',
+    marginBottom: 50,
+    width: '100%',
+    display: 'flex',
+    alignItems: 'center',
+    gap: 8,
+    },
+anchorLink: {
+    textDecorationLine: 'underline',
+    color: '#3FA2F6',
+    cursor: 'pointer',
+},    
 
 });
 

@@ -10,7 +10,7 @@ const HomeScreen =({navigation})=>{
   
   return (   
       <View style={GlobalStyles.home_container}>
-          <TouchableOpacity style={GlobalStyles.home_btn}>
+          <TouchableOpacity style={GlobalStyles.home_btn} onPress={()=>navigation.navigate('ProfileScreen')}>
             <Text style={GlobalStyles.home_btn_text}>
               Perfil
             </Text>
